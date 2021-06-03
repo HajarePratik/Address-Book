@@ -19,7 +19,7 @@ public class AddressBook {
 		modelContactList.add(createPerson);
 	}
 	
-	public ModelContactDetails getContactInput()							// Getting a Input from User
+	public ModelContactDetails getContactInput()					  	// Getting a Input from User
 	{
 		
 	
