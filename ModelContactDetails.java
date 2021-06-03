@@ -19,7 +19,7 @@ public class ModelContactDetails {
 		this.zip = zip;
 		this.phoneNo = phoneNo;
 	}
-	
+
 	
 	// Getter and Setter Method 
 	
