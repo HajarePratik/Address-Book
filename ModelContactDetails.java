@@ -2,11 +2,12 @@ package com.bridgelabz.addressbook;
 
 public class ModelContactDetails {
 
+	// Declearing a Variable
 	public String firstName, lastName, address, city, state, email;
 	public long zip;
 	public long phoneNo;
 	
-	
+	// Creating a Constuctor
 	public ModelContactDetails(String firstName, String lastName, String address, String city, String state,
 			String email, long zip, long phoneNo) {
 		this.firstName = firstName;
@@ -18,6 +19,9 @@ public class ModelContactDetails {
 		this.zip = zip;
 		this.phoneNo = phoneNo;
 	}
+	
+	
+	// Getter and Setter Method 
 	
 	public String getFirstName() {
 		return firstName;
