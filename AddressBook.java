@@ -53,7 +53,7 @@ public class AddressBook {
 		int ch = 0;
 		Scanner sc = new Scanner(System.in);
 		AddressBook AD = new AddressBook(); 					// Creating a Object of Main Class
-		while(true)												// Checking a Choice with Switch Statement
+		while(true)								// Checking a Choice with Switch Statement
 		{
 			System.out.println("1.Adding Contact \n2.Exit");
 			System.out.println("Enter a Your Choice :");
