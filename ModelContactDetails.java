@@ -20,7 +20,6 @@ public class ModelContactDetails {
 		this.phoneNo = phoneNo;
 	}
 	
-	
 	// Getter and Setter Method 
 	
 	public String getFirstName() {
