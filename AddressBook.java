@@ -40,10 +40,12 @@ public class AddressBook {
 	}
 	
 	public void addContact(ModelContactDetails createPerson)
+
 	{
 		System.out.println("Adding a New Contact for " + createPerson.firstName);      // Creating a Method and Adding object in a Arraylist 
 		modelContactList.add(createPerson);
 	}
+	
 	
 	public void editContact() 								// Creating a Method and Edit with Switch Statement
 	{
@@ -156,7 +158,7 @@ public class AddressBook {
 			for(int i = 0; i<modelContactList.size(); i++) 
 			{
 				int num = i+1;
-				System.out.println("Availble Contact In List : "+ num);
+				System.out.println("Availble Contact In List Position At : "+ num);
 				System.out.println("First Name :" +modelContactList.get(i).firstName + " Last Name :" + modelContactList.get(i).lastName);
 				System.out.println("Address :" +modelContactList.get(i).address + " City :" + modelContactList.get(i).city + " State :" + modelContactList.get(i).state + " Zip :" + modelContactList.get(i).zip);
 				System.out.println("Phone No :" +modelContactList.get(i).phoneNo);
@@ -204,9 +206,9 @@ public class AddressBook {
 						
 				case 5:
 					
-					System.out.println("Thank You We are Exiting");
-					System.exit(0);
-					break;
+						System.out.println("Thank You We are Exiting");
+						System.exit(0);
+						break;
 					
 					
 				default: 
