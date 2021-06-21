@@ -182,14 +182,16 @@ public class AddressBook {
 		}
 	}
 	
-	public static void main(String[] args) 
+	// UC 6 Create a Multiple Address Book 
+	public AddressBook addressBookOption() 
 	{
 		
 		System.out.println("Welcome to the Address Book System");
 		int ch = 0;
 		Scanner sc = new Scanner(System.in);
 		AddressBook AD = new AddressBook(); 					// Creating a Object of Main Class
-		while(true)												// Checking a Choice with Switch Statement
+		boolean runLoop = true;
+		while(runLoop)											// Checking a Choice with Switch Statement
 		{
 			System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact\n5.Add Multiple Person \n6.Exit");
 			System.out.println("Enter a Your Choice :");
@@ -226,7 +228,7 @@ public class AddressBook {
 				case 6:
 					
 						System.out.println("Thank You We are Exiting");
-						System.exit(0);
+						runLoop = false;
 						break;
 					
 					
@@ -235,6 +237,7 @@ public class AddressBook {
 				
 			}
 		}
+		return AD;
 		
 	}
 	
