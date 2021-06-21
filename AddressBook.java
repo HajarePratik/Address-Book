@@ -166,22 +166,6 @@ public class AddressBook {
 		}
 	}
 	
-	// UC7 Duplicated Contact
-	public void duplicateContact() 					// Creating a Method & Checking if Name is Duplicated or Not
-	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a person Name:");
-		String firstName = sc.nextLine();
-		for (int i = 0; i < modelContactList.size(); i++) 
-		{
-			ModelContactDetails model = modelContactList.get(i);
-
-			if (modelContactList.get(i).getFirstName().equals(firstName)) {
-				System.out.println("Contact Already Exist, Please Try Again");
-			}
-		}
-	}
-	
 	// UC 6 Create a Multiple Address Book 
 	public AddressBook addressBookOption() 
 	{
@@ -193,7 +177,7 @@ public class AddressBook {
 		boolean runLoop = true;
 		while(runLoop)											// Checking a Choice with Switch Statement
 		{
-			System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact\n5.Add Multiple Person \n6.Exit");
+			System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact \n5.Exit");
 			System.out.println("Enter a Your Choice :");
 			ch = sc.nextInt();
 
@@ -222,15 +206,9 @@ public class AddressBook {
 						break;
 						
 				case 5:
-						AD.duplicateContact();
-						break;
-						
-				case 6:
-					
 						System.out.println("Thank You We are Exiting");
 						runLoop = false;
 						break;
-					
 					
 				default: 
 						System.out.println("Sorry You are Type Wrong Choice");
