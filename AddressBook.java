@@ -166,32 +166,18 @@ public class AddressBook {
 		}
 	}
 	
-	// UC7 Duplicated Contact
-	public void duplicateContact() 					// Creating a Method & Checking if Name is Duplicated or Not
-	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a person Name:");
-		String firstName = sc.nextLine();
-		for (int i = 0; i < modelContactList.size(); i++) 
-		{
-			ModelContactDetails model = modelContactList.get(i);
-
-			if (modelContactList.get(i).getFirstName().equals(firstName)) {
-				System.out.println("Contact Already Exist, Please Try Again");
-			}
-		}
-	}
-	
-	public static void main(String[] args) 
+	// UC 6 Create a Multiple Address Book 
+	public AddressBook addressBookOption() 
 	{
 		
 		System.out.println("Welcome to the Address Book System");
 		int ch = 0;
 		Scanner sc = new Scanner(System.in);
 		AddressBook AD = new AddressBook(); 					// Creating a Object of Main Class
-		while(true)												// Checking a Choice with Switch Statement
+		boolean runLoop = true;
+		while(runLoop)											// Checking a Choice with Switch Statement
 		{
-			System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact\n5.Add Multiple Person \n6.Exit");
+			System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact \n5.Add Multiple Person \n6.Exit");
 			System.out.println("Enter a Your Choice :");
 			ch = sc.nextInt();
 
@@ -222,20 +208,36 @@ public class AddressBook {
 				case 5:
 						AD.duplicateContact();
 						break;
-						
+					
 				case 6:
-					
-						System.out.println("Thank You We are Exiting");
-						System.exit(0);
-						break;
-					
-					
+					System.out.println("Thank You We are Exiting");
+					runLoop = false;
+					break;
+				
 				default: 
 						System.out.println("Sorry You are Type Wrong Choice");
 				
 			}
 		}
+		return AD;
 		
+	}
+	
+	// UC7 Duplicated Contact
+	public void duplicateContact() 					// Creating a Method & Checking if Name is Duplicated or Not
+	{
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter a Person Name:");
+			String duplicateName = sc.nextLine();
+			for (int i = 0; i < modelContactList.size(); i++) 
+			{
+				ModelContactDetails model = modelContactList.get(i);
+				
+				if (modelContactList.get(i).getFirstName().equals(duplicateName)) {
+					System.out.println("Contact Already Exist, Please Try Again");
+				}
+			}
+			
 	}
 	
 }
