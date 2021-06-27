@@ -3,10 +3,13 @@ package com.bridgelabz.addressbook;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
+
 public class AddressBook {
 	
 
-	private ArrayList<ModelContactDetails> modelContactList;  			// Declearing Arraylist with Model Class  
+	public ArrayList<ModelContactDetails> modelContactList;  			// Declearing Arraylist with Model Class  
 	
 	public AddressBook()
 	{
@@ -208,11 +211,10 @@ public class AddressBook {
 				case 5:
 						AD.duplicateContact();
 						break;
-					
 				case 6:
-					System.out.println("Thank You We are Exiting");
-					runLoop = false;
-					break;
+						System.out.println("Thank You We are Exiting");
+						runLoop = false;
+						break;
 				
 				default: 
 						System.out.println("Sorry You are Type Wrong Choice");
@@ -222,7 +224,6 @@ public class AddressBook {
 		return AD;
 		
 	}
-	
 	// UC7 Duplicated Contact
 	public void duplicateContact() 					// Creating a Method & Checking if Name is Duplicated or Not
 	{
@@ -239,5 +240,6 @@ public class AddressBook {
 			}
 			
 	}
-	
+
+
 }
