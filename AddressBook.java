@@ -180,7 +180,7 @@ public class AddressBook {
         boolean runLoop = true;
         while(runLoop)											// Checking a Choice with Switch Statement
         {
-            System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact \n5.Add Multiple Person \n6.Exit");
+            System.out.println("1.Adding Contact \n2.Update Contact \n3.Delete Contact \n4.View Contact \n5.Add Multiple Person \n6.Sort by Person \n7.Exit");
             System.out.println("Enter a Your Choice :");
             ch = sc.nextInt();
 
@@ -213,6 +213,11 @@ public class AddressBook {
                     break;
 
                 case 6:
+                    System.out.println("------Sorted by name----");
+                    AD.viewSortedByNames();
+                    break;
+
+                case 7:
                     System.out.println("Thank You We are Exiting");
                     runLoop = false;
                     break;
@@ -238,6 +243,14 @@ public class AddressBook {
             }
         }
 
+    }
+
+    // UC8 Sorted Name by Alphabetically Order
+    public void viewSortedByNames() {
+        List<ModelContactDetails> sortedDetails = modelContactList.stream()
+                .sorted(Comparator.comparing(n->n.toString()))
+                .peek(n -> System.out.println(n))
+                .collect(Collectors.toList());
     }
 
 
